@@ -1,0 +1,9 @@
+c:\users\елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\bin\Debug\рпис4.exe.config
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\bin\Debug\рпис4.exe
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\bin\Debug\рпис4.pdb
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.csprojResolveAssemblyReference.cache
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.Form1.resources
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.Properties.Resources.resources
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.csproj.GenerateResource.Cache
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.exe
+C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.pdb
