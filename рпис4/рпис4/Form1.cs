@@ -18,6 +18,9 @@ namespace рпис4
     {
         int n = 0;
         int k = 0;
+        bool b;
+        string TextCopyright= "djhgd1111";
+          
         public Form1()
         {
 
@@ -26,7 +29,19 @@ namespace рпис4
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //foreach (ListViewItem it in listView1.Items)
+            //   {
+            //        int i = 0;
+            //        i = it.ImageIndex;
+            //        pictureBox1.Image =imageList1.Images[i];
+            //    }
+            try
+            {
+                pictureBox1.Image = imageList1.Images[listView1.Items[listView1.SelectedIndices[0]].ImageIndex];
+            }
+            catch (Exception e1)
+            {
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,15 +64,13 @@ namespace рпис4
                 string fileName = openFileDialog1.FileName;
                 addImage(fileName);
                 n++;
-                label1.Text = n.ToString();
-                for (int i = k; i < n; i++)
+               for (int i = k; i < n; i++)
                 {
                     pictureBox1.Image = imageList1.Images[i];
                     ListViewItem item = new ListViewItem();
-                    // item.Text = openFileDialog1.FileName[i];
                     item.ImageIndex = i;
                     this.listView1.Items.Add(item);
-                    dataGridView1.Rows.Add(openFileDialog1.FileName, imageList1.Images[i].Width, imageList1.Images[i].Height, i.ToString());
+                    dataGridView1.Rows.Add(openFileDialog1.FileName, imageList1.Images[i].Width, imageList1.Images[i].Height,TextCopyright );//i.ToString()
                     k++;
                 }
             }
@@ -78,9 +91,12 @@ namespace рпис4
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            pictureBox1.Image = DrawText2("Специально для Елизаветы;)", imageList1.Images[0]);
-            pictureBox1.Image.Save("d:\\newImage.bmp");
+        { 
+            foreach (Image ig in imageList1.Images)
+            { 
+                pictureBox1.Image = DrawText2(TextCopyright, ig);
+                pictureBox1.Image.Save("d:\\newImage.bmp");
+            }
         }
 
         private void DrawText2(string text)
@@ -108,15 +124,93 @@ namespace рпис4
             System.Drawing.Graphics formGraphics;
             Image newImage = img;
             formGraphics = Graphics.FromImage(newImage);
-            formGraphics.DrawString(text, new Font("Arial", 35), Brushes.Blue, new Point(100, 20));
+            formGraphics.DrawString(text, new Font("Arial", 15), Brushes.Blue, new Point(20, 20));
             formGraphics.Dispose();
             myPen.Dispose();
             formGraphics.Dispose();
             return newImage;
         }
+        private void copyrightTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label1.Visible=true;
+            textBox1.Visible = true;
+            TextCopyright = textBox1.Text;
+            label1.Text = "new text for copyright:";
+            
+        }
+        
+        private void listView1_Click(object sender, EventArgs e)
+        {
+            // Add these file names to the ImageList on load.
+            // string[] files = { "image.png", "logo.jpg" };
+            if (b)
+                b = false;
+            else
+                b = true;
+            var images = imageList1.Images;
+            //  MessageBox.Show(""+imageList1.Images.Count);
+            List<Image> imList = new List<Image>();
+            int index = 0;
+            foreach (ListViewItem k in listView1.Items)
+            {
+                index++;
+                if (k.Checked)
+                {
+                    break;
+                }
+            }
+            int index2 = 0;
+            foreach (Image t in images)
+            {
+                // Use Image.FromFile to load the file.
+                // images.Add(Image.FromFile(file));
+                ////  index2++;
+                // if (index == index2)
+
+
+                imList.Add(DrawText2("12323", t));
+            }
+            // MessageBox.Show(""+imageList1.Images.Count);
+            imageList1.Images.Clear();
+            if (b)
+                imageList1.Images.AddRange(imList.ToArray());
+            else
+                imageList1.Images.AddRange(imList.ToArray());
+            // pictureBox1.Image = imageList1.Images[2];
+            listView1.SmallImageList = imageList1;
+
+            //   listView1.SelectedItems.Clear();
+        }
+
         private void copyrightTextToolStripMenuItem_Click()
         {
-        
+
+        }
+
+        private void Form1_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBox1.Visible = false;
+                label1.Visible = false;
+            }
+        }
+
+        private void listView1_ItemActivate(object sender, EventArgs e)
+        {
+            //for (ListViewItem it in listView1.Items)
+            //{
+            //    int i = 0;
+            //    i = it.ImageIndex;
+            //    pictureBox1.Image = imageList1.Images[i];
+            //}
+            
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -7,3 +7,12 @@ C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рп
 C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.csproj.GenerateResource.Cache
 C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.exe
 C:\Users\Елизавета\documents\visual studio 2013\Projects\рпис4\рпис4\obj\Debug\рпис4.pdb
+D:\GIT\study_projects\рпис4\рпис4\bin\Debug\рпис4.exe.config
+D:\GIT\study_projects\рпис4\рпис4\obj\Debug\рпис4.exe
+D:\GIT\study_projects\рпис4\рпис4\obj\Debug\рпис4.pdb
+D:\GIT\study_projects\рпис4\рпис4\bin\Debug\рпис4.exe
+D:\GIT\study_projects\рпис4\рпис4\bin\Debug\рпис4.pdb
+D:\GIT\study_projects\рпис4\рпис4\obj\Debug\рпис4.csprojResolveAssemblyReference.cache
+D:\GIT\study_projects\рпис4\рпис4\obj\Debug\рпис4.Form1.resources
+D:\GIT\study_projects\рпис4\рпис4\obj\Debug\рпис4.Properties.Resources.resources
+D:\GIT\study_projects\рпис4\рпис4\obj\Debug\рпис4.csproj.GenerateResource.Cache
